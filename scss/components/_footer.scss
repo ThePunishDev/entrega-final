@@ -1,0 +1,300 @@
+.footer{
+    @include templateFlex(space-between);
+    flex-direction: column;
+    align-items: center;
+    background-color: $accent;
+    padding: 60px 20px;
+    
+    &__invitacion h2{  
+        @extend .container;      
+        color: $secondary;
+        font-size: 32px;
+        font-weight: 200;
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
+
+    &__copyright{    
+        @extend .container;    
+        color: $secondary;
+        font-size: 15px;
+        font-weight: 200;
+        padding-top: 20px;
+    }
+
+    &__redes{
+        @include templateFlex(space-between);
+
+        .rs-facebook{
+            width: 50px;
+            margin: 15px;
+        }
+        
+        .rs-instagram{
+            width: 50px;
+            margin: 15px;
+        }
+        
+        .rs-twitter{
+            width: 50px;
+            margin: 15px;
+        }
+        
+        .rs-twitch{
+            width: 50px;
+            margin: 15px;
+        }
+        
+        .rs-youtube{
+            width: 50px;
+            margin: 15px;
+        }
+
+        $iconSocialMedia: (
+
+            facebook: #3b5998,
+
+            instagram: #c92d8f,
+
+            twitter: #00acee,
+
+            twitch:  #6441a5,
+
+            youtube: #c4302b,
+
+        );
+
+        @each $namesocialMedia, $colorIcon in $iconSocialMedia{
+            .rs-#{$namesocialMedia}{
+                color: $secondary;
+                font-size: 50px;
+                transition: $transition;
+
+                &:hover{
+                    color: $colorIcon;
+                }
+            }
+        }
+    }
+}
+
+
+
+// MEDIA QUERIES
+
+@media (max-width: 1199px){
+
+    .footer__invitacion h2{
+        font-size: 32px;
+        margin: 40px 30px 30px 30px;
+    }              
+}
+
+@media (max-width: 991px){    
+
+    .footer{
+        &__invitacion h2{
+            font-size: 30px;
+            color: $secondary;
+            text-align: center;
+            display: flex;
+            padding-bottom: 10px;
+            margin: 10px;            
+        }
+
+        &__redes{  
+
+            @include templateFlex(center);
+            margin-left: 25px;                    
+            
+            .rs-facebook{
+                font-size: 40px;
+                margin: 10px;                                             
+            }
+            
+            .rs-instagram{
+                font-size: 40px;
+                margin: 10px;                               
+            }
+            
+            .rs-twitter{
+                font-size: 40px;
+                margin: 10px;                             
+            }
+            
+            .rs-twitch{
+                font-size: 40px;
+                margin: 10px;                              
+            }
+            
+            .rs-youtube{
+                font-size: 40px;
+                margin: 10px;                                            
+            }                      
+        }              
+    }    
+}
+
+@media (max-width: 767px){
+
+    .footer{
+        &__invitacion h2{
+            font-size: 23px;
+            color: $secondary;
+            text-align: center;
+            display: flex;
+            padding-bottom: 10px;
+            margin: 10px;            
+        }
+
+        &__redes{  
+
+            @include templateFlex(center);
+            margin-left: 25px;                    
+            
+            .rs-facebook{
+                font-size: 35px;
+                margin: 5px;                                             
+            }
+            
+            .rs-instagram{
+                font-size: 35px;
+                margin: 5px;                               
+            }
+            
+            .rs-twitter{
+                font-size: 35px;
+                margin: 5px;                             
+            }
+            
+            .rs-twitch{
+                font-size: 35px;
+                margin: 5px;                              
+            }
+            
+            .rs-youtube{
+                font-size: 35px;
+                margin: 5px;                                            
+            }                      
+        }              
+    }     
+}    
+
+@media (max-width: 575px){
+
+    .footer{
+        &__invitacion h2{
+            font-size: 16px;
+            color: $secondary;
+            text-align: center;
+            display: flex;
+            padding-bottom: 10px;
+            margin: 10px;            
+        }
+
+        &__redes{  
+
+            @include templateFlex(center);
+            margin-left: 25px;                    
+            
+            .rs-facebook{
+                font-size: 30px;
+                margin: 0px;                                             
+            }
+            
+            .rs-instagram{
+                font-size: 30px;
+                margin: 0px;                               
+            }
+            
+            .rs-twitter{
+                font-size: 30px;
+                margin: 0px;                             
+            }
+            
+            .rs-twitch{
+                font-size: 30px;
+                margin: 0px;                              
+            }
+            
+            .rs-youtube{
+                font-size: 30px;
+                margin: 0px;                                            
+            }                      
+        }
+        
+        
+                
+    }    
+}
+
+@media (max-width: 561px){
+
+    .footer{   
+
+        &__invitacion h2{
+            font-size: 12px;
+            color: $secondary;
+            text-align: center;
+            display: flex;
+            padding-bottom: 10px;
+            margin: 10px;            
+        }
+
+        &__copyright small{
+            font-size: 10px;        
+        }       
+
+        &__redes{  
+
+            @include templateFlex(center);
+            margin-left: 25px;                    
+            
+            .rs-facebook{
+                font-size: 25px;
+                margin: 0px;                                             
+            }
+            
+            .rs-instagram{
+                font-size: 25px;
+                margin: 0px;                               
+            }
+            
+            .rs-twitter{
+                font-size: 25px;
+                margin: 0px;                             
+            }
+            
+            .rs-twitch{
+                font-size: 25px;
+                margin: 0px;                              
+            }
+            
+            .rs-youtube{
+                font-size: 25px;
+                margin: 0px;                                            
+            }                      
+        }        
+    }
+    
+}
+
+@media (max-width: 320px){
+
+    .footer{   
+
+        &__invitacion h2{
+            font-size: 12px;
+            color: $secondary;
+            text-align: center;
+            display: flex;
+            padding-bottom: 10px;
+            margin: 10px;            
+        }
+
+        &__copyright small{
+            font-size: 10px;        
+        }                       
+    }
+
+}
